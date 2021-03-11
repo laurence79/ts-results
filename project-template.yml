@@ -1,0 +1,9 @@
+uses:
+  repo: git@github.com:rivr-systems/oap-repo-templates.git
+  path: public-code-library
+
+parameters:
+  projectName: "@laurence79/ts-results"
+  projectTitle: "Typescript Result Primitives"
+  projectDescription: "A library that adds function result primitives to support better control flows in expected failure scenarios.."
+  repoName: "ts-results"
