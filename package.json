@@ -1,33 +1,30 @@
 {
   "name": "@laurence79/ts-results",
   "version": "0.0.1",
+  "private": false,
   "description": "A library that adds function result primitives to support better control flows in expected failure scenarios..",
   "keywords": [],
   "homepage": "https://github.com/laurence79/ts-results#readme",
-  "bugs": {
-    "url": "https://github.com/laurence79/ts-results/issues"
-  },
+  "bugs": { "url": "https://github.com/laurence79/ts-results/issues" },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/laurence79/ts-results.git"
   },
   "license": "ISC",
   "author": "",
-  "main": "./lib/index.js",
-  "module": "./lib/index.es.js",
-  "types": "./lib/index.d.ts",
-  "files": [
-    "lib/"
-  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist/"],
   "scripts": {
-    "build": "npm run clean && ./node_modules/.bin/rollup -c",
-    "build:watch": "./node_modules/.bin/rollup -c -w",
-    "clean": "./node_modules/.bin/rimraf lib",
-    "lint": "./node_modules/.bin/eslint --cache 'src/**/*.ts' --quiet",
-    "lint:watch": "./node_modules/.bin/esw --cache 'src/**/*.ts' --watch",
+    "build": "npm run clean && rollup -c",
+    "build:watch": "rollup -c -w",
+    "clean": "rimraf dist",
+    "lint": "eslint --cache 'src/**/*.ts' --quiet",
+    "lint:watch": "esw --cache 'src/**/*.ts' --watch",
     "prepublishOnly": "npm run build",
     "test": "jest --passWithNoTests",
-    "boiler-update": "./node_modules/.bin/boiler-sync update"
+    "boiler-update": "boiler-sync update"
   },
   "devDependencies": {
     "@rollup/plugin-json": "^4.1.0",
@@ -57,7 +54,5 @@
     "ttypescript": "^1.5.12",
     "typescript": "^4.2.2"
   },
-  "peerDependencies": {
-    "tslib": "^2.1.0"
-  }
+  "peerDependencies": { "tslib": "^2.1.0" }
 }
